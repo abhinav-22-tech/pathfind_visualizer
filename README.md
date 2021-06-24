@@ -1,7 +1,7 @@
 # Path-Finding-Visualization
 Data Structure graphics
 
-[Live demo](https://abhinav-22-tech.github.io/pathfind_visualizer/)
+[Live demo](https://abhinav-22-tech.github.io/pathfind_visualizer--incognito/)
 
 # Getting Started with Create React App
 
