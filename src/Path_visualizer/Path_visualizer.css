@@ -1,5 +1,7 @@
 .grid {
-    margin: 100px 0 0;
+    margin: 10px;
+    position: relative;
+    top: 100px;
 }
 .rowid {
     margin: -4px;
