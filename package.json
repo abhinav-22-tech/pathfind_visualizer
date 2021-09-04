@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abhinav-22-tech.github.io/path_visualizer",
+  "homepage": "https://abhinav-22-tech.github.io/pathfind_visualizer/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
