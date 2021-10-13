@@ -1,25 +1,19 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import Node from './Node/Node';
-import {breadthFirstSearch, getNodesInShortestPathOrder} from '../Algorithms/breadthFirstSearch';
-import {dijkstra} from '../Algorithms/dijkstra';
-import {dfs} from '../Algorithms/dfs';
-// import {greedybfs} from '../Algorithms/gbfs';
-import './Path_visualizer.css';
-=======
 import React, { Component } from "react";
 import Node from "./Node/Node";
 import {
   breadthFirstSearch,
   getNodesInShortestPathOrder,
 } from "../Algorithms/breadthFirstSearch";
-import { dijkstra } from "../Algorithms/dijkastra";
+import { dijkstra } from "../Algorithms/dijkstra";
 import { dfs } from "../Algorithms/dfs";
 import { astar } from "../Algorithms/astar";
+import {
+  bidirectionalGreedySearch,
+  getNodesInShortestPathOrderBidirectionalGreedySearch,
+} from "../Algorithms/bidirectionalGreedySearch";
 import "./Path_visualizer.css";
 
 import UI from "./ui";
->>>>>>> 1cd6423a7df3ed627be5221fb6f5d8a9348eb494
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
@@ -97,7 +91,9 @@ export default class Path_visualizer extends Component {
       visitedNodesInOrder = dfs(grid, startNode, finishNode);
     else if (algo === astar)
       visitedNodesInOrder = astar(grid, startNode, finishNode);
+    else if(algo === ){
 
+    }
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     this.animateAlgo(visitedNodesInOrder, nodesInShortestPathOrder);
   }
@@ -113,7 +109,7 @@ export default class Path_visualizer extends Component {
           Breadth First Search
         </button>
         <button onClick={() => this.visualize(dfs)}>Depth First Search</button>
-        <button onClick={() => this.visualize(dfs)}>A *</button>
+        <button onClick={() => this.visualize(astar)}>A *</button>
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
