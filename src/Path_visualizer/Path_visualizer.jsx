@@ -7,10 +7,6 @@ import {
 import { dijkstra } from "../Algorithms/dijkstra";
 import { dfs } from "../Algorithms/dfs";
 import { astar } from "../Algorithms/astar";
-import {
-  bidirectionalGreedySearch,
-  getNodesInShortestPathOrderBidirectionalGreedySearch,
-} from "../Algorithms/bidirectionalGreedySearch";
 import "./Path_visualizer.css";
 
 import UI from "./ui";
@@ -91,9 +87,7 @@ export default class Path_visualizer extends Component {
       visitedNodesInOrder = dfs(grid, startNode, finishNode);
     else if (algo === astar)
       visitedNodesInOrder = astar(grid, startNode, finishNode);
-    else if(algo === ){
 
-    }
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     this.animateAlgo(visitedNodesInOrder, nodesInShortestPathOrder);
   }
