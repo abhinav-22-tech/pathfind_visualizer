@@ -7,6 +7,8 @@ import {
 import { dijkstra } from "../Algorithms/dijkstra";
 import { dfs } from "../Algorithms/dfs";
 import { astar } from "../Algorithms/astar";
+import { greedyBFS } from "../Algorithms/greedyBestFirstSearch";
+import { randomWalk } from "../Algorithms/randomWalk";
 import "./Path_visualizer.css";
 
 import UI from "./ui";
@@ -73,6 +75,31 @@ export default class Path_visualizer extends Component {
     }
   }
 
+  animateRandomWalk = (visitedNodesInOrder) => {
+    for (let i = 1; i <= visitedNodesInOrder.length; i++) {
+      if (i === visitedNodesInOrder.length) {
+        setTimeout(() => {
+          this.setState({ visualizingAlgorithm: false });
+        }, i * this.state.speed);
+        return;
+      }
+      let node = visitedNodesInOrder[i];
+      if (i === visitedNodesInOrder.length - 1) {
+        setTimeout(() => {
+          //finish node
+          document.getElementById(`node-${node.row}-${node.col}`).className =
+            "node node-finish-reached";
+        }, i * this.state.speed);
+        continue;
+      }
+      setTimeout(() => {
+        //visited node
+        document.getElementById(`node-${node.row}-${node.col}`).className =
+          "node node-visited";
+      }, i * 25);
+    }
+  };
+
   visualize(algo) {
     const { grid } = this.state;
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
@@ -87,9 +114,17 @@ export default class Path_visualizer extends Component {
       visitedNodesInOrder = dfs(grid, startNode, finishNode);
     else if (algo === astar)
       visitedNodesInOrder = astar(grid, startNode, finishNode);
+    else if (algo === greedyBFS)
+      visitedNodesInOrder = greedyBFS(grid, startNode, finishNode);
+    else if (algo === randomWalk)
+      visitedNodesInOrder = randomWalk(grid, startNode, finishNode);
 
-    const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
-    this.animateAlgo(visitedNodesInOrder, nodesInShortestPathOrder);
+    if (algo === randomWalk) {
+      this.animateRandomWalk(visitedNodesInOrder);
+    } else {
+      const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
+      this.animateAlgo(visitedNodesInOrder, nodesInShortestPathOrder);
+    }
   }
 
   render() {
@@ -104,6 +139,10 @@ export default class Path_visualizer extends Component {
         </button>
         <button onClick={() => this.visualize(dfs)}>Depth First Search</button>
         <button onClick={() => this.visualize(astar)}>A *</button>
+        <button onClick={() => this.visualize(greedyBFS)}>
+          Greedy Best First Search
+        </button>
+        <button onClick={() => this.visualize(randomWalk)}>Random Walk</button>
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
