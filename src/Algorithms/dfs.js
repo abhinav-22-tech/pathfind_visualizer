@@ -1,5 +1,8 @@
 // main dfs function
 export function dfs(grid, startNode, finishNode) {
+  if (!startNode || !finishNode || startNode === finishNode) {
+    return false;
+  }
   const visitedNodesInOrder = [];
   const stack = [];
   stack.push(startNode);
@@ -12,32 +15,32 @@ export function dfs(grid, startNode, finishNode) {
     ) {
       closestNode.isVisited = true;
       visitedNodesInOrder.push(closestNode);
-      const {col, row} = closestNode;
+      const { col, row } = closestNode;
       let nextNode;
-      if(row > 0){
+      if (row > 0) {
         nextNode = grid[row - 1][col];
-        if(!nextNode.isVisited){
+        if (!nextNode.isVisited) {
           nextNode.previousNode = closestNode;
           stack.push(nextNode);
         }
       }
-      if(row < grid.length - 1){
+      if (row < grid.length - 1) {
         nextNode = grid[row + 1][col];
-        if(!nextNode.isVisited){
+        if (!nextNode.isVisited) {
           nextNode.previousNode = closestNode;
           stack.push(nextNode);
         }
       }
-      if(col > 0){
+      if (col > 0) {
         nextNode = grid[row][col - 1];
-        if(!nextNode.isVisited){
+        if (!nextNode.isVisited) {
           nextNode.previousNode = closestNode;
           stack.push(nextNode);
         }
       }
-      if(col < grid[0].length - 1){
+      if (col < grid[0].length - 1) {
         nextNode = grid[row][col + 1];
-        if(!nextNode.isVisited){
+        if (!nextNode.isVisited) {
           nextNode.previousNode = closestNode;
           stack.push(nextNode);
         }

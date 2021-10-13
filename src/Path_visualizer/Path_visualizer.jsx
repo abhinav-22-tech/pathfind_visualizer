@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Node from './Node/Node';
 import {breadthFirstSearch, getNodesInShortestPathOrder} from '../Algorithms/breadthFirstSearch';
-import {dijkstra} from '../Algorithms/dijkastra';
+import {dijkstra} from '../Algorithms/dijkstra';
 import {dfs} from '../Algorithms/dfs';
 // import {greedybfs} from '../Algorithms/gbfs';
 import './Path_visualizer.css';
