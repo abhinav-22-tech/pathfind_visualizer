@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // main dijkstra's function 
 export function dijkstra(grid, startNode, finishNode){
   const visitedNodesInOrder = [];
@@ -47,6 +48,15 @@ function getUnvisitedNeighbors(node, grid){
   return neighbors.filter(neighbor => !neighbor.isVisited);
 }
 
+=======
+// Need Heuristic
+export function astar(grid, startNode, finishNode){
+  //Working on it
+}
+
+
+
+>>>>>>> 1cd6423a7df3ed627be5221fb6f5d8a9348eb494
 // Find Shortest Path After the Dijkstra Function run using backtracking 
 export function getNodesInShortestPathOrder(finishNode){
   const nodesInShortestPathOrder = [];
