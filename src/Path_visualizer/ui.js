@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{ background: "#391763" }}>
-        <Toolbar>
+        <Toolbar variant="dense">
           <Typography variant="h5" className={classes.title}>
             Path Finding
           </Typography>

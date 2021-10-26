@@ -10,8 +10,8 @@ import { astar } from "../Algorithms/astar";
 import { greedyBFS } from "../Algorithms/greedyBestFirstSearch";
 import { randomWalk } from "../Algorithms/randomWalk";
 import "./Path_visualizer.css";
-
-import UI from "./ui";
+import { CssBaseline } from "@material-ui/core";
+// import UI from "./ui";
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
@@ -89,7 +89,7 @@ export default class Path_visualizer extends Component {
           //finish node
           document.getElementById(`node-${node.row}-${node.col}`).className =
             "node node-finish-reached";
-        }, i * this.state.speed);
+        }, i * 25);
         continue;
       }
       setTimeout(() => {
@@ -132,7 +132,8 @@ export default class Path_visualizer extends Component {
 
     return (
       <>
-        <UI />
+        <CssBaseline />
+        {/* <UI /> */}
         <button onClick={() => this.visualize(dijkstra)}>Dijkstra</button>
         <button onClick={() => this.visualize(breadthFirstSearch)}>
           Breadth First Search
