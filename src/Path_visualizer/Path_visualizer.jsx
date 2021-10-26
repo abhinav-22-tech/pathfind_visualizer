@@ -134,7 +134,7 @@ export default class Path_visualizer extends Component {
       <>
         <CssBaseline />
         {/* <UI /> */}
-        <button onClick={() => this.visualize(dijkstra)}>Dijkstra</button>
+        {/* <button onClick={() => this.visualize(dijkstra)}>Dijkstra</button>
         <button onClick={() => this.visualize(breadthFirstSearch)}>
           Breadth First Search
         </button>
@@ -143,7 +143,7 @@ export default class Path_visualizer extends Component {
         <button onClick={() => this.visualize(greedyBFS)}>
           Greedy Best First Search
         </button>
-        <button onClick={() => this.visualize(randomWalk)}>Random Walk</button>
+        <button onClick={() => this.visualize(randomWalk)}>Random Walk</button> */}
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
@@ -178,9 +178,9 @@ export default class Path_visualizer extends Component {
 
 const getInitialGrid = () => {
   const grid = [];
-  for (let row = 0; row < 22; row++) {
+  for (let row = 0; row < 24; row++) {
     const currentRow = [];
-    for (let col = 0; col < 60; col++) {
+    for (let col = 0; col < 62; col++) {
       currentRow.push(createNode(col, row));
     }
     grid.push(currentRow);

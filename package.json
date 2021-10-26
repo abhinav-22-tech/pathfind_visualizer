@@ -4,8 +4,12 @@
   "private": true,
   "homepage": "https://abhinav-22-tech.github.io/pathfind_visualizer/",
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@mui/material": "^5.0.5",
+    "@mui/styles": "^5.0.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",

@@ -1,8 +1,8 @@
-/* .grid {
-    margin: 10px;
-    position: relative;
-    top: 100px;
-} */
+.grid {
+    margin-top: 1.2rem;
+    /* margin-left: 1rem; */
+    /* position: relative; */
+}
 .rowid {
     margin: -4px;
 }
