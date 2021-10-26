@@ -1,77 +1,62 @@
-import React from "react";
+// import { Icon } from "@material-ui/core";
+import React, { useState } from "react";
 import {
-  makeStyles,
   AppBar,
   Toolbar,
+  IconButton,
   Typography,
   Button,
+  makeStyles,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Dropdown,
+  DropdownItem,
 } from "@material-ui/core";
+import { CallMissedSharp, Height, Menu } from "@material-ui/icons";
+import logo from "../images/logo.png";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+const useStyles = makeStyles({
+  header: {
+    backgroundColor: "#050A30",
   },
-  title: {
-    flexGrow: 3,
+  logo: {
+    width: "10rem",
+    height: "auto",
   },
-  subTitle: {
-    flexGrow: 1,
+  formControl: {
+    minWidth: 100,
+    color: "white",
   },
-}));
+});
 
-export default function ButtonAppBar() {
+function Navbar() {
   const classes = useStyles();
-
+  const [value, setValue] = useState("");
   return (
-    <div className={classes.root}>
-      <AppBar position="static" style={{ background: "#391763" }}>
-        <Toolbar variant="dense">
-          <Typography variant="h5" className={classes.title}>
-            Path Finding
-          </Typography>
+    <div>
+      <AppBar position="sticky" className={classes.header}>
+        <Toolbar>
+          <IconButton edge="start" aria-label="app" color="inherit">
+            <img src={logo} alt="logo" className={classes.logo} />
 
-          <Button
-            variant="variant"
-            style={{
-              padding: "13px 16px",
-              backgroundColor: "#069983",
-              color: "#FFFFFF",
-              fontSize: "15px",
-            }}
-            className={classes.subTitle}
-          >
-            Visualize!
-          </Button>
+            <FormControl className={classes.formControl}>
+              <InputLabel>Algorithm</InputLabel>
+              <Select onChange={(e) => setValue(e.target.value)}>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={11}>Tens</MenuItem>
+                <MenuItem value={12}>Tens</MenuItem>
+                <MenuItem value={13}>Tens</MenuItem>
+              </Select>
+            </FormControl>
 
-          <Button
-            variant="variant"
-            style={{ color: "#FFFFFF" }}
-            className={classes.subTitle}
-          >
-            Algorithm
-          </Button>
-
-          <Button
-            variant="variant"
-            style={{ color: "#FFFFFF" }}
-            className={classes.subTitle}
-          >
-            Mazes & Pattern
-          </Button>
-
-          <Button
-            variant="variant"
-            style={{ color: "#FFFFFF" }}
-            className={classes.subTitle}
-          >
-            Speed
-          </Button>
-
-          <Typography variant="h6" className={classes.subTitle}>
-            Time Taken: 10ms
-          </Typography>
+            <p>You Selected: {value}</p>
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
+export default Navbar;
