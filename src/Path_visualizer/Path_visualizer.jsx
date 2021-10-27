@@ -11,7 +11,7 @@ import { greedyBFS } from "../Algorithms/greedyBestFirstSearch";
 import { randomWalk } from "../Algorithms/randomWalk";
 import "./Path_visualizer.css";
 import { CssBaseline } from "@material-ui/core";
-// import UI from "./ui";
+import Navbar from "./ui";
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
@@ -24,6 +24,10 @@ export default class Path_visualizer extends Component {
     this.state = {
       grid: [],
       mouseIsPressed: false,
+      visualizingAlgorithm: false,
+      generatingMaze: false,
+      speed: 10,
+      mazeSpeed: 10,
     };
   }
   componentDidMount() {
@@ -133,7 +137,8 @@ export default class Path_visualizer extends Component {
     return (
       <>
         <CssBaseline />
-        {/* <UI /> */}
+
+        <Navbar visualize={this.visualize.bind(this)} />
         {/* <button onClick={() => this.visualize(dijkstra)}>Dijkstra</button>
         <button onClick={() => this.visualize(breadthFirstSearch)}>
           Breadth First Search
@@ -178,9 +183,9 @@ export default class Path_visualizer extends Component {
 
 const getInitialGrid = () => {
   const grid = [];
-  for (let row = 0; row < 24; row++) {
+  for (let row = 0; row < 22; row++) {
     const currentRow = [];
-    for (let col = 0; col < 62; col++) {
+    for (let col = 0; col < 60; col++) {
       currentRow.push(createNode(col, row));
     }
     grid.push(currentRow);

@@ -6,7 +6,6 @@ import Navbar from "./Path_visualizer/ui";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Path_visualizer />
     </div>
   );
