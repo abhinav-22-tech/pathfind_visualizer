@@ -1,75 +1,40 @@
-# Path-Finding-Visualization
-Data Structure graphics
+# Path-Finder
 
+[![Open Source Love](https://img.shields.io/badge/Open%20Source-%F0%9F%A4%8D-Green?style=flat-the-badge)](https://github.com/abhinav-22-tech/pathfind_visualizer)
+![GitHub repo size](https://img.shields.io/github/repo-size/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge)
+
+![GitHub issues](https://img.shields.io/github/issues/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge) ![GitHub forks](https://img.shields.io/github/forks/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge) ![GitHub Repo stars](https://img.shields.io/github/stars/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge) ![GitHub watchers](https://img.shields.io/github/watchers/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge) ![GitHub](https://img.shields.io/github/license/abhinav-22-tech/pathfind_visualizer?style=flat-the-badge)
+<br/>
+
+## 🎈 Live Project 🚀📢
 [Live demo](https://abhinav-22-tech.github.io/pathfind_visualizer/)
 
-# Getting Started with Create React App
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Want to contribute ?
 
-## Available Scripts
+- If you found any typo / logical error / runtime error or you want to add another topic, feel free to create a pull request.
 
-In the project directory, you can run:
+- **How to create a pull request ?**
 
-### `npm start`
+  - step 1: &nbsp; Fork this repository
+  - step 2: &nbsp; Clone this to your local machine
+  - step 3: &nbsp; Make a new branch
+  - step 4: &nbsp; Make changes
+  - step 5: &nbsp; Push it back to your repo
+  - step 6: &nbsp; Click compare and pull request
+  - step 7: &nbsp; Click create pull request
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Are there any rules ?**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - Nothing strict, just keep the indentation clean
+  - Use comments wherever necessary
+  - Follow folder and file structure
+  - Use appropriate variable names
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Feedback
+- If you have any feedback, please reach out to me [here](https://twitter.com/Abhinav54458435).
