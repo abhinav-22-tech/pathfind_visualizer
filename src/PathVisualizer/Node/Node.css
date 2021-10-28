@@ -1,16 +1,16 @@
 .node {
-    width: 1.6vw;
-    height: 1.6vw;
-    outline: 1px solid rgba(227, 170, 238, 0.75);
-    display: inline-block;
+  width: 1.6vw;
+  height: 1.6vw;
+  outline: 1px solid rgba(227, 170, 238, 0.75);
+  display: inline-block;
 }
 
 .node-finish {
-    background-color: red;
+  background-color: red;
 }
 
 .node-start {
-    background-color: green;
+  background-color: green;
 }
 .node-visited {
   animation-name: visitedAnimation;
@@ -44,7 +44,7 @@
     transform: scale(1.2);
     background-color: rgba(71, 233, 144, 0.842);
   }
-  
+
   100% {
     transform: scale(1);
     background-color: rgba(187, 52, 214, 0.75);
@@ -79,10 +79,10 @@
     outline: 1px solid rgb(112, 252, 131);
   }
 }
-.node-wall{
+/* .node-wall {
   background-color: rgb(12, 53, 71);
   outline: 1px solid rgb(12, 53, 71);
-  animation-name: nodeWall;
+  animation-name: wallAnimation;
   animation-duration: 0.3s;
   animation-timing-function: ease-out;
   animation-delay: 0;
@@ -90,17 +90,40 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
+} */
+
+.node-wall {
+  background-color: rgb(12, 53, 71);
+  outline: 1px solid rgb(12, 53, 71);
+  display: inline-block;
 }
 
-/* @keyframes nodeWall {
+.node-wall-animated {
+  display: inline-block;
+  animation-name: wallAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wallAnimation {
   0% {
-    transform: scale(0.3);
-    background-color: rgb(78, 119, 136);
+    transform: scale(0.4);
+    background-color: rgb(12, 53, 71);
+    border-radius: 30%;
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(0.6);
     background-color: rgb(12, 53, 71);
+    border-radius: 20%;
+  }
+
+  75% {
+    transform: scale(0.8);
+    background-color: rgb(12, 53, 71);
+    border-radius: 10%;
   }
 
   100% {
@@ -108,5 +131,4 @@
     background-color: rgb(12, 53, 71);
     outline: 1px solid rgb(12, 53, 71);
   }
-} */
-
+}

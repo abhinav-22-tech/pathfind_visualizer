@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import Path_visualizer from "./Path_visualizer/Path_visualizer";
-import Navbar from "./Path_visualizer/ui";
+import PathVisualizer from "./PathVisualizer/PathVisualizer";
 
 function App() {
   return (
     <div className="App">
-      <Path_visualizer />
+      <PathVisualizer />
     </div>
   );
 }

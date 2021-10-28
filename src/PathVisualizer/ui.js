@@ -91,7 +91,9 @@ class Navbar extends Component {
     this.setState({ open3: undefined }, () => {
       this.setState({ anchorE3: null });
     });
-    this.setState({ speed: e.target.innerText });
+    this.setState({ speed: e.target.innerText }, () => {
+      this.props.updateSpeed(this.state.speed);
+    });
   };
 
   render() {
@@ -227,6 +229,7 @@ class Navbar extends Component {
               variant="contained"
               disableElevation
               onClick={this.handleClick3}
+              // onChange={() => this.props.updateSpeed(this.state.speed)}
               style={{
                 backgroundColor: "orange",
                 color: "white",
@@ -258,7 +261,9 @@ class Navbar extends Component {
               variant="outlined"
               sx={{ ml: 2 }}
               style={{ borderColor: "lightgreen", color: "lightgreen" }}
-              onClick={this.props.visualize("dijkstra")}
+              onClick={() =>
+                this.props.visualize(this.state.algorithm, this.state.speed)
+              }
             >
               Visualize Algorithm
             </Button>
@@ -267,6 +272,7 @@ class Navbar extends Component {
               variant="contained"
               sx={{ ml: 2 }}
               style={{ backgroundColor: "green" }}
+              onClick={() => this.props.generateMaze(this.state.maze)}
             >
               Generate Maze
             </Button>
@@ -275,6 +281,7 @@ class Navbar extends Component {
               variant="contained"
               sx={{ ml: 2 }}
               style={{ backgroundColor: "darkred" }}
+              onClick={() => this.props.clearGrid()}
             >
               Clear Grid
             </Button>
